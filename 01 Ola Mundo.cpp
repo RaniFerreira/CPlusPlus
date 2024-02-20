@@ -5,9 +5,10 @@
 *******************************************************************************/
 #include <iostream>
 
-int main()
-{
-    std::cout<<"Olá, Mundo";
+using namespace std;
+
+int main() {
+    cout << "Olá, Mundo" << endl;
 
     return 0;
 }
