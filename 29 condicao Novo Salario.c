@@ -7,7 +7,7 @@ acordo com a tabela a seguir:
  - 10 anos ou mais: aumento de 20%
 *******************************************************************************/
 #include <stdio.h>
-#include <string.h>
+#include <string>
 int main()
 {
     char nomefuncionario[50];
