@@ -1,0 +1,98 @@
+
+Claro! Aqui estão as principais bibliotecas e funções para manipulação e comparação de strings em C++:
+
+1. Biblioteca <cstring>
+A biblioteca <cstring> fornece funções para manipulação de strings C-style (strings terminadas em null). Aqui estão algumas funções úteis:
+
+strlen(const char *str)
+
+Descrição: Calcula o comprimento da string str, excluindo o caractere nulo de terminação.
+Retorno: size_t
+strcpy(char *dest, const char *src)
+
+Descrição: Copia a string src para dest.
+Retorno: Ponteiro para dest
+strncpy(char *dest, const char *src, size_t n)
+
+Descrição: Copia até n caracteres da string src para dest.
+Retorno: Ponteiro para dest
+strcmp(const char *str1, const char *str2)
+
+Descrição: Compara as strings str1 e str2.
+Retorno: Zero se as strings são iguais, um valor negativo se str1 é menor, e um valor positivo se str1 é maior.
+strncmp(const char *str1, const char *str2, size_t n)
+
+Descrição: Compara até n caracteres das strings str1 e str2.
+Retorno: Zero se as substrings são iguais, um valor negativo se str1 é menor, e um valor positivo se str1 é maior.
+strcat(char *dest, const char *src)
+
+Descrição: Anexa a string src ao final da string dest.
+Retorno: Ponteiro para dest
+strncat(char *dest, const char *src, size_t n)
+
+Descrição: Anexa até n caracteres da string src ao final da string dest.
+Retorno: Ponteiro para dest
+strchr(const char *str, int c)
+
+Descrição: Procura o primeiro caractere c na string str.
+Retorno: Ponteiro para o caractere encontrado ou nullptr se não encontrado.
+strrchr(const char *str, int c)
+
+Descrição: Procura o último caractere c na string str.
+Retorno: Ponteiro para o caractere encontrado ou nullptr se não encontrado.
+strstr(const char *haystack, const char *needle)
+
+Descrição: Procura a substring needle na string haystack.
+Retorno: Ponteiro para o início da substring encontrada ou nullptr se não encontrado.
+2. Biblioteca <string>
+A biblioteca <string> fornece a classe std::string, que facilita a manipulação de strings em C++. Aqui estão algumas funções úteis da classe std::string:
+
+size_t length() const
+
+Descrição: Retorna o comprimento da string.
+Retorno: Número de caracteres na string.
+size_t size() const
+
+Descrição: Retorna o tamanho da string (equivalente a length()).
+std::string substr(size_t pos, size_t len) const
+
+Descrição: Retorna uma substring da string original, começando na posição pos e com comprimento len.
+Retorno: std::string
+std::string& append(const std::string& str)
+
+Descrição: Anexa a string str ao final da string atual.
+Retorno: Referência para a string atual.
+std::string& operator+=(const std::string& str)
+
+Descrição: Anexa a string str ao final da string atual.
+Retorno: Referência para a string atual.
+int compare(const std::string& str) const
+
+Descrição: Compara a string atual com str.
+Retorno: Zero se as strings são iguais, um valor negativo se a string atual é menor, e um valor positivo se a string atual é maior.
+bool empty() const
+
+Descrição: Verifica se a string está vazia.
+Retorno: true se a string está vazia, false caso contrário.
+std::string& insert(size_t pos, const std::string& str)
+
+Descrição: Insere a string str na posição pos da string atual.
+Retorno: Referência para a string atual.
+std::string& erase(size_t pos = 0, size_t len = npos)
+
+Descrição: Remove len caracteres a partir da posição pos.
+Retorno: Referência para a string atual.
+std::string& replace(size_t pos, size_t len, const std::string& str)
+
+Descrição: Substitui len caracteres a partir da posição pos com a string str.
+Retorno: Referência para a string atual.
+Comparações Adicionais
+std::string::find(const std::string& str, size_t pos = 0) const
+
+Descrição: Procura a substring str a partir da posição pos.
+Retorno: Posição da primeira ocorrência ou std::string::npos se não encontrado.
+std::string::rfind(const std::string& str, size_t pos = npos) const
+
+Descrição: Procura a substring str a partir da posição pos em busca reversa.
+Retorno: Posição da última ocorrência ou std::string::npos se não encontrado.
+Essas funções e métodos fornecem uma ampla gama de opções para manipulação e comparação de strings em C++. Se precisar de mais detalhes ou de outras funções específicas, sinta-se à vontade para perguntar!
